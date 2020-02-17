@@ -17,6 +17,8 @@ inputs:
 outputs:
   browser_download_url:
     description: 'The URL users can navigate to in order to download the uploaded asset'
+  url:
+    description: 'The URL of the uploaded asset'
 runs:
   using: 'node12'
   main: 'dist/index.js'

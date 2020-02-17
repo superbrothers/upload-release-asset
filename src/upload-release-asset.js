@@ -31,11 +31,12 @@ async function run() {
 
     // Get the browser_download_url for the uploaded release asset from the response
     const {
-      data: { browser_download_url: browserDownloadUrl }
+      data: { browser_download_url: browserDownloadUrl, url }
     } = uploadAssetResponse;
 
     // Set the output variable for use by other actions: https://github.com/actions/toolkit/tree/master/packages/core#inputsoutputs
     core.setOutput('browser_download_url', browserDownloadUrl);
+    core.setOutput('url', url);
   } catch (error) {
     core.setFailed(error.message);
   }
